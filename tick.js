@@ -17,17 +17,12 @@ const marking = function (event) {
     let threeTd = false;
 
     if (
-      tds[trNumber][0].textContent === turn &&
-      tds[trNumber][1].textContent === turn &&
-      tds[trNumber][2].textContent === turn
-    ) {
-      threeTd = true;
-    }
-
-    if (
-      tds[0][tdNumber].textContent === turn &&
-      tds[1][tdNumber].textContent === turn &&
-      tds[2][tdNumber].textContent === turn
+      (tds[trNumber][0].textContent === turn &&
+        tds[trNumber][1].textContent === turn &&
+        tds[trNumber][2].textContent === turn) ||
+      (tds[0][tdNumber].textContent === turn &&
+        tds[1][tdNumber].textContent === turn &&
+        tds[2][tdNumber].textContent === turn)
     ) {
       threeTd = true;
     }
